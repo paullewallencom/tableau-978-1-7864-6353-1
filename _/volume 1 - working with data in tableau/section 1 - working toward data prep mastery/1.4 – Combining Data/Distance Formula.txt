@@ -1,0 +1,8 @@
+//For miles, use 3959 
+//For kilometers, use 6371 
+
+3959 * ACOS
+(
+SIN(RADIANS([Latitude])) * SIN(RADIANS([Latitude (Distance1)])) +
+COS(RADIANS([Latitude])) * COS(RADIANS([Latitude (Distance1)])) * COS(RADIANS([Longitude (Distance1)]) - RADIANS([Longitude]))
+)
